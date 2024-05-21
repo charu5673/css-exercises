@@ -1,5 +1,7 @@
-p{
-    background-color: green;
+div{
+    background-color: red;
     color: white;
-    font-size: 18px;
-}
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+  }
