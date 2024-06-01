@@ -1,10 +1,20 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url(Queen\ Misti.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .container {
+  height: 100vh;
+  gap: 10px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 200px 4fr;
+  grid-template-rows: 1fr 1fr 8fr 1fr;
 }
 
 .container div {
@@ -12,55 +22,97 @@
   font-size: 32px;
   font-family: Helvetica;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 243, 245);
 }
 
 .header {
-  background-color: #393f4d;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 15fr;
+  gap: 300px;
+  grid-column: 1/3;
+  background-color: #6c5443;
+}
+
+#logo{
+  font-family: 'Pacifico';
+  font-size: 3rem;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
 }
 
+.menu ul{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(150px,1fr));
+}
 .sidebar {
-  background-color: #C50208;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px; 
+  grid-template-rows: repeat(4,1fr);
+  grid-column: 1/2;
+  grid-row: 2/4;
+  background-color: #86905d;
 }
 
 .sidebar .photo {
-  background-color: white;
+  background-color: rgb(253, 232, 232);
   color: black;
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
 }
 
+.sidebar .photo img{
+  height: 15vh;
+  width: auto;
+}
+
 
 .sidebar .side-content {
-  background-color: white;
+  background-color: rgb(223, 204, 204);
   color: black;
   font-size: 16px;
   font-weight: normal;
 }
 
 .nav {
-  background-color: #C50208;
+  align-items: center;
+  display: grid;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #86905d;
+}
+
+.nav ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
 
 .nav ul li {
+  list-style: none;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .article {
-  background-color: #bccbde;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 15px;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  background-color: #d3a4b5;
 }
 
 .article p {
   font-size: 18px;
   font-family: sans-serif;
-  color: white;
+  color: rgb(233, 211, 211);
   text-align: left;
 }
 
@@ -82,7 +134,12 @@
 }
 
 .footer {
-  background-color: #393f4d;
+  align-items: center;
+  display: grid;
+  margin-bottom: 10px;
+  grid-row: 4/5;
+  grid-column: 1/3;
+  background-color: #a27d5c;
 }
 
 .footer p {
